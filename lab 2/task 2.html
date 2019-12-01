@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task 2</title>
+    </head>
+    <body>
+        <center>
+            <form>
+                
+                <fieldset style="width: 30%;">
+                	<h1>Contact information</h1><br>
+                    <legend>Payment Form</legend>
+                    <fieldset style="width: 45%;">
+                    	<legend>Title</legend>
+                    <input type="radio" name="titles" value="Mister">Mister</input> <br>
+                    <input type="radio" name="titles" value="Miss">Miss</input> <br>
+                	</fieldset>
+                <p>Following fields with * are required</p>
+                <br>
+                <br>
+                <!--Username Field-->
+                <label for="username">Username*: </label>
+                <input type="text" name="username" id="username" placeholder="Username" maxlength="20" required/>
+                <br />
+                
+                <!--Password Field-->
+                <label for="password">Password*: </label>
+                <input autocomplete="off" type="password" name="password" id="password" placeholder="Password" maxlength="20" required/>
+                <br />
+
+                <!--Email Field-->
+                <label for="email">Email*: </label>
+                <input autocomplete="off" type="email" name="email" id="email" placeholder="somthing@email.com" maxlength="20" required/>
+                <br />
+
+                <h1>Payment information</h1><br>
+                <label for="card_type">Card Type: </label>
+                <select name="card_type" id="card_type" >
+                    <option value="visa" selected>Visa</option>
+                    <option value="mastercard">Master Card</option>
+                    <option value="unionpay">UnionPay</option>
+                </select><br>
+
+                <label for="card_number">Card Number*: </label>
+                <input type="number" maxlength="16" style="width: 10%;" placeholder="0000000000000000" required/><br>
+
+                <label for="exp_date">Expiration Date*: </label>
+                <input type="date" name="exp_date" id="exp_date" required><br>
+                <i>formatted as dd/mm/yy</i><br>
+
+
+                <input type="submit" name="submit" id="submit" value="Validate the payment">
+                </fieldset>
+            </form> 
+        </center>
+    </body>
+</html>
