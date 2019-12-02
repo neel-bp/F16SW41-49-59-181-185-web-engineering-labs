@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task2</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<main role="main" class="container text-center p-5">
+		<form>
+                <div class="form-group">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" required value="">
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" required value="">
+                </div>
+                <div class="form-group">
+                    <label for="phome">Phone : </label>
+                    <input type="text" id="phone" required value="">
+                </div>
+                <div class="form-group">
+                    <label for="feedback">Feedback</label><br>
+                    <textarea class="form-control" name="feedback" id="feedback" cols="6" rows="5" placeholder="Your Feedback" value=""></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="check()">Submit</button>
+            </form>
+	</main>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+	function check() {
+		var firstName=document.getElementById('first-name').value
+		var lastName=document.getElementById('last-name').value
+		var phone=document.getElementById('phone').value
+		var feedback=document.getElementById('feedback').value
+
+		if (firstName === '' && lastName === '' && phone === '' && feedback === '') {alert("please properly fill the form!")} else {alert("feedback submitted successfully")}
+	}
+</script>
+</body>
+</html>
