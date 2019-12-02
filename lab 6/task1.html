@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task1</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <main role="main" class="container" style="width: 25%;">
+        <div class="card" style="width:350px; margin-left: 5px; margin-top: 15px">
+			<img id="sliderimage" class="card-img-top" src="wheat.png" style="width:100%">
+			<div class="card-body text-center">
+				<h4 class="card-title">Image Slider</h4>
+				<p></p>
+				<div class="row">
+				<button type="button" class="btn btn-primary col-sm-5" onclick="slider('prev')">Prev</button>
+				<p class="col-sm-2"></p>
+				<button type="button" class="btn btn-primary col-sm-5" onclick="slider('next')">Next</button>
+				</div>
+			</div>
+		</div>
+    </main>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+	var counter = 0;
+	var sliderimages = ['wheat.png', 'morocco.png', 'leaves.png', 'christmas-dark.png'];
+	function slider(button) {
+		if (button === 'next'){
+			counter++
+			if (counter > sliderimages.length-1) {
+				counter=0;				
+			}
+		}
+		else if (button === 'prev'){
+			counter--;
+			if (counter < 0){
+				counter = sliderimages.length-1;
+			}
+		}
+		document.getElementById('sliderimage').src = sliderimages[counter]
+	}
+</script>
+</body>
+</html>
