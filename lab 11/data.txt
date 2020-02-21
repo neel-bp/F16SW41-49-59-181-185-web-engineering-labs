@@ -1,0 +1,5 @@
+1     Neelo  Sales   5000
+2     Nandlal   Technology      5500
+3     Malaria   Technology      7000
+4     Sajad   Marketing       9500
+5     Corona   Technology      6000
